@@ -85,5 +85,13 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
     }
 
+    public void OnOpenShop()
+    {
+        GuiManager.instance.ShopPanel.SetActive(true);
+    }
+    public void OnCloseShop()
+    {
+        GuiManager.instance.ShopPanel.SetActive(false);
+    }
 
 }

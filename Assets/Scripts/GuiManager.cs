@@ -10,7 +10,9 @@ public class GuiManager : MonoBehaviour
     public TMP_Text yourScoreValueText;
     public TMP_Text currentScoreText;
     public TMP_Text BestScoreValueText;
+
     public GameObject BestScorePanel;
+    public GameObject ShopPanel;
 
     private void Awake()
     {
