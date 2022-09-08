@@ -43,6 +43,7 @@ public class Player : MonoBehaviour
                 jumpForce = gravity * jumpMuliplayer;
                 rb.velocity = new Vector2(0, jumpForce);
                 GameManager.instance.AddScore();
+                SoundManager.instance.StairSound();
                 Camera.main.backgroundColor = collision.gameObject.GetComponent<SpriteRenderer>().color;
                 //DestroyAndMakeNewStair(collision);
                 effect();
@@ -167,6 +168,7 @@ public class Player : MonoBehaviour
     {
         Destroy(Instantiate(deathEffect, transform.position, transform.rotation), 0.5f);
         Destroy(gameObject, 0.5f);
+        SoundManager.instance.DeathSound();
         GameManager.instance.EndGame();
     }
 }
